@@ -1,0 +1,368 @@
+*{
+    margin: 0; padding: 0;
+}
+
+@font-face {
+    font-family: 'MaisonNeue';
+    src: url('MaisonNeue-Black.otf') format('truetype');
+    src: url('MaisonNeue-BlackItalic.otf') format('truetype');
+    src: url('MaisonNeue-Bold.otf') format('truetype');
+    src: url('MaisonNeue-BoldItalic.otf') format('truetype');
+    src: url('MaisonNeue-Book.otf') format('truetype');
+    src: url('MaisonNeue-BookItalic.otf') format('truetype');
+    src: url('MaisonNeue-Demi.otf') format('truetype');
+    src: url('MaisonNeue-DemiItalic.otf') format('truetype');
+    src: url('MaisonNeue-ExtraBold.otf') format('truetype');
+    src: url('MaisonNeue-ExtraBoldItalic.otf') format('truetype');
+    src: url('MaisonNeue-ExtraThin.otf') format('truetype');
+    src: url('MaisonNeue-ExtraThinItalic.otf') format('truetype');
+    src: url('MaisonNeue-Light.otf') format('truetype');
+    src: url('MaisonNeue-LightItalic.otf') format('truetype');
+    src: url('MaisonNeue-Medium.otf') format('truetype');
+    src: url('MaisonNeue-MediumItalic.otf') format('truetype');
+    src: url('MaisonNeue-Thin.otf') format('truetype');
+    src: url('MaisonNeue-ThinItalic.otf') format('truetype');
+}
+
+
+
+
+
+
+
+body{
+    font-family: sans-serif;
+    overflow-x: hidden;
+    background-size: cover;
+}
+
+/* Navbar */
+.hero{
+    background-image: url('assets/img/hero\ image.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+    align-items: center;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+}
+nav ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+nav ul li a:hover{
+    color: #DF1995;
+}
+
+nav ul li a::selection{
+    color: #DF1995;
+}
+
+
+
+/* Hamburger menu */
+.menu-toggle{
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input{
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    opacity: 0;
+    left: -6px;
+    top: -4px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span{
+    display: block;
+    width: 24px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: all 0.3s;
+}
+
+/* Animasi Hamburger */
+.menu-toggle span:nth-child(2){
+    transform-origin: 0 0;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2){
+    transform: rotate(45deg) translate(-1px, -1px);
+    background-color: b;
+}
+
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 0;
+}
+
+.menu-toggle input:checked ~ span:nth-child(4){
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3){
+    opacity: 0;
+    transform: scale(0);
+}
+/* Nav end */
+
+
+
+
+/* Section 1 */
+.content{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.content h6{
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Maison Neue';
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: 1%;
+    margin-top: 134px;
+    margin-bottom: 8px;
+}
+
+.content h1{
+    color: #fff;
+    font-size: 24px;
+    font-family: 'Maison Neue';
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 1%;
+    width: 216px;
+    height: 52px;
+    margin-bottom: 16px;
+}
+
+.content h3{
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Maison Neue';
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 1%;
+    height: 16px;
+    line-height: 15.94px;
+    margin-bottom: 16px;
+}
+
+.content .btn{
+    background-color: #E02D69;
+    color: #fff;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-right: 80px;
+    padding-left: 80px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 16px;
+}
+
+.content span{
+    font-size: 14px;
+}
+
+.content p{
+    color: #fff;
+    font-size: 10px;
+    font-weight: 500;
+    width: 297px;
+    line-height: 13.28px;
+    margin-bottom: 42px;
+}
+
+
+
+
+.container .link-semua{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.link-semua .judul{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 19.8px;
+    letter-spacing: 1%;
+}
+
+.link-semua p a{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15.94px;
+    letter-spacing: 1%;
+    color: black;
+    text-decoration: none;
+}
+
+.container p{
+    margin-bottom: 16px;
+}
+
+.poto{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.quotes .box1{
+    align-items: center;
+}
+
+.box1{
+    width: 376px;
+    height: 202px;
+    background: #0E122F;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+   
+}
+
+.box1 h3{
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 1%;
+    width: 258px;
+    height: 86px;
+}
+
+.box1 span{
+    font-weight: 700;
+}
+.box2{
+    width: 376px;
+    height: 202px;
+    background: #93328E;
+   
+}
+
+.box2 h3{
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 1%;
+    width: 258px;
+    height: 86px;
+    float: right;
+    text-align: right;
+}
+
+.box2 span{
+    font-weight: 700;
+}
+
+
+.box{
+    margin-top: 66px;
+}
+
+.box3 img{
+    margin-bottom: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Breakpoint */
+
+/* Ukuran Tablet */
+@media screen and (max-width: 768px) {
+    nav ul{
+        width: 50%;
+    }
+}
+
+/* Ukuran Mobile */
+@media screen and (max-width: 576px) {
+    .menu-toggle{
+        display: flex;
+    }
+    nav ul{
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 50%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: #fff;
+        transform: translateX(100%);
+        transition: all 0.5s;
+        opacity: 0;
+    }
+
+    nav ul.slide{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

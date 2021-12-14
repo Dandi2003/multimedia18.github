@@ -1,0 +1,258 @@
+*{
+    margin: 0; padding: 0;
+}
+
+@font-face {
+    font-family: 'MaisonNeue';
+    src: url('MaisonNeue-Black.otf') format('truetype');
+    src: url('MaisonNeue-BlackItalic.otf') format('truetype');
+    src: url('MaisonNeue-Bold.otf') format('truetype');
+    src: url('MaisonNeue-BoldItalic.otf') format('truetype');
+    src: url('MaisonNeue-Book.otf') format('truetype');
+    src: url('MaisonNeue-BookItalic.otf') format('truetype');
+    src: url('MaisonNeue-Demi.otf') format('truetype');
+    src: url('MaisonNeue-DemiItalic.otf') format('truetype');
+    src: url('MaisonNeue-ExtraBold.otf') format('truetype');
+    src: url('MaisonNeue-ExtraBoldItalic.otf') format('truetype');
+    src: url('MaisonNeue-ExtraThin.otf') format('truetype');
+    src: url('MaisonNeue-ExtraThinItalic.otf') format('truetype');
+    src: url('MaisonNeue-Light.otf') format('truetype');
+    src: url('MaisonNeue-LightItalic.otf') format('truetype');
+    src: url('MaisonNeue-Medium.otf') format('truetype');
+    src: url('MaisonNeue-MediumItalic.otf') format('truetype');
+    src: url('MaisonNeue-Thin.otf') format('truetype');
+    src: url('MaisonNeue-ThinItalic.otf') format('truetype');
+}
+
+
+
+
+
+
+
+body{
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.container{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+}
+nav ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+nav ul li a:hover{
+    color: #DF1995;
+}
+
+nav ul li a::selection{
+    color: #DF1995;
+}
+
+
+
+/* Hamburger menu */
+.menu-toggle{
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input{
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    opacity: 0;
+    left: -6px;
+    top: -4px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span{
+    display: block;
+    width: 24px;
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 3px;
+    transition: all 0.3s;
+}
+
+/* Animasi Hamburger */
+.menu-toggle span:nth-child(2){
+    transform-origin: 0 0;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2){
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 0;
+}
+
+.menu-toggle input:checked ~ span:nth-child(4){
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3){
+    opacity: 0;
+    transform: scale(0);
+}
+/* Nav end */
+
+
+
+
+/* Section 1 */
+.section1 h6{
+    color: #fff;
+    font-size: 12px;
+    font-family: 'Maison Neue';
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: 1%;
+}
+
+.section1 h1{
+    color: #fff;
+    font-size: 24px;
+    font-family: 'Maison Neue';
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 1%;
+    width: 216px;
+    height: 52px;
+    margin-top: 8px;
+}
+
+.section1 h3{
+    color: #fff;
+    font-size: 12px;
+    font-family: 'Maison Neue';
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 1%;
+    width: 83px;
+    height: 16px;
+    margin-top: 24px;
+    line-height: 15.94px;
+}
+
+
+
+
+
+.pp-wrapper{
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 50px;
+
+}
+
+.pp-wrapper .pp .kiri{
+    float: left;
+}
+.pp-wrapper .pp .kanan{
+    float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Breakpoint */
+
+/* Ukuran Tablet */
+@media screen and (max-width: 768px) {
+    nav ul{
+        width: 50%;
+    }
+}
+
+/* Ukuran Mobile */
+@media screen and (max-width: 576px) {
+    .menu-toggle{
+        display: flex;
+    }
+    nav ul{
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 50%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: #fff;
+        transform: translateX(100%);
+        transition: all 0.5s;
+        opacity: 0;
+    }
+
+    nav ul.slide{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
